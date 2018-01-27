@@ -23,7 +23,7 @@ teams: []
 > Provide a list of teams to be created. Each team will be map of `key: value` pairs. [See example data file](./awx-example-data.yml) for keys.
 
 credentials: []
-> Provide a list of credentials to be created. Each credential will be map of `key: value` pairs. Each credential type has a differenct mapping of `inputs`. Check the Tower CLI docs for more info. For each credential, provide an organization name with which to associate the credential. [See example data file](./awx-example-data.yml) for keys.
+> Provide a list of credentials to be created. Each credential will be map of `key: value` pairs. Each credential type has a different mapping of `inputs`. Check the Tower CLI docs for more info. For each credential, provide an organization name with which to associate the credential. [See example data file](./awx-example-data.yml) for keys.
 
 users: []
 > Provide a list of users to be created. Each user will be map of `key: value` pairs. For each user, provide a list of team names, and a list of organizations. The user will be associated with the organizations and teams. [See example data file](./awx-example-data.yml) for keys.
