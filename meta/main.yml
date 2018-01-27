@@ -46,8 +46,10 @@ galaxy_info:
     - all 
 
   galaxy_tags:
-  - tower 
+  - awx 
+  - tower
   - tower-cli 
   - cli 
+  - config
 
 dependencies: []
