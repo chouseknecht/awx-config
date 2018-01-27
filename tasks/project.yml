@@ -1,0 +1,10 @@
+- name: Create projects
+  command: >
+    tower-cli project create
+      --name '{{ item.name }}'
+      --description '{{ item.description }}'
+      --scm-type '{{ item.scm_type }}'
+      --scm-url '{{ item.scm_url }}'
+      --organization '{{ item.organization }}'
+      --wait
+  with_items: '{{ projects }}'

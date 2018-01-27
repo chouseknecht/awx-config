@@ -1,0 +1,6 @@
+- include_tasks: config.yml
+- include_tasks: organization.yml
+- include_tasks: team.yml
+- include_tasks: credential.yml
+- include_tasks: user.yml
+- include_tasks: project.yml 

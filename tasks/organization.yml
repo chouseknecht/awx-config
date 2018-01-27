@@ -1,0 +1,6 @@
+# organization.yml
+--- 
+- name: Create organizations
+  command: tower-cli organization create --name '{{ item.name }}' --description '{{ item.description }}'
+  with_items: '{{ organizations }}'
+

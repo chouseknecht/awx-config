@@ -1,0 +1,10 @@
+- name: Setup tower
+  hosts: all
+  gather_facts: no
+
+  vars_files:
+  # NOTE: your AWX data should be encrypted with Ansible Vault
+  - awx-example-data.yml
+
+  roles:
+  - name: awx-config

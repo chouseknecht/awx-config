@@ -1,0 +1,27 @@
+# user.yml
+---
+- name: Create users
+  command: >
+    tower-cli user create
+      --username '{{ item.username }}'
+      --password '{{ item.password }}'
+      --email '{{ item.email }}' 
+      --first-name '{{ item.first_name }}'
+      --last-name '{{ item.last_name }}'
+  with_items: '{{ users }}'
+
+- name: Associate users with organizations
+  command: >
+    tower-cli organization associate
+      --organization '{{ item.1 }}' --user '{{ item.0.username }}'
+  with_subelements:
+  - '{{ users }}'
+  - organizations
+
+- name: Associate users with teams 
+  command: >
+    tower-cli team associate
+      --team '{{ item.1 }}' --user '{{ item.0.username }}'
+  with_subelements:
+  - '{{ users }}'
+  - teams 

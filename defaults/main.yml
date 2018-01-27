@@ -1,0 +1,46 @@
+# defaults/main.yml
+---
+# The following is the expected structure of the Tower data.
+
+# NOTE: Don't put sensitive auth data in here. Instead, use an Ansible Vault, and pass the vault file path
+#       to vars_files in the playbook. 
+
+tower_host: '' 
+tower_username: admin
+tower_password: password
+tower_verify_ssl: false
+
+organizations: []
+ #- name: ''
+ #  description: ''
+
+teams: []
+ #- name: ''
+ #  description: ''
+
+credentials: []
+ #- name: '' 
+ #  description: '' 
+ #  team: Developers
+ #  organization: ''
+ #  credential_type: ''
+ #  # inputs is a text representation of a Yaml data strucuture 
+ #  inputs: | 
+ #     username: ''
+ #     password: ''
+
+users: []
+#- username: '' 
+#  password: '' 
+#  email: ''
+#  first_name: 
+#  last_name: 
+#  organizations: []
+#  teams: []
+
+projects: []
+ #- name: '' 
+ #  description: '' 
+ #  scm_type: ''
+ #  scm-url: ''
+ #  organization: ''

@@ -1,0 +1,53 @@
+galaxy_info:
+  author: Chris Houseknecht 
+  description: Example using Tower CLI to configure Tower instance 
+  company: Ansible by Red Hat 
+
+  # If the issue tracker for your role is not on github, uncomment the
+  # next line and provide a value
+  # issue_tracker_url: http://example.com/issue/tracker
+
+  # Some suggested licenses:
+  # - BSD (default)
+  # - MIT
+  # - GPLv2
+  # - GPLv3
+  # - Apache
+  # - CC-BY
+  license: Apache v2 
+
+  min_ansible_version: 2.4 
+
+  # If this a Container Enabled role, provide the minimum Ansible Container version.
+  # min_ansible_container_version:
+
+  # Optionally specify the branch Galaxy will use when accessing the GitHub
+  # repo for this role. During role install, if no tags are available,
+  # Galaxy will use this branch. During import Galaxy will access files on
+  # this branch. If Travis integration is configured, only notifications for this
+  # branch will be accepted. Otherwise, in all cases, the repo's default branch
+  # (usually master) will be used.
+  #github_branch:
+
+  #
+  # Below are all platforms currently available. Just uncomment the ones that apply
+  # to your role. If you don't see your platform on this list, let us know,
+  # and we'll get it added!
+  #
+  platforms:
+  - name: MacOSX
+    versions:
+    - 10.11
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu 
+    versions:
+    - all 
+
+  galaxy_tags:
+  - tower 
+  - tower-cli 
+  - cli 
+
+dependencies: []

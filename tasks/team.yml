@@ -1,0 +1,7 @@
+- name: Create teams
+  command: >
+    tower-cli team create --name '{{ item.name }}'
+      --description '{{ item.description }}' 
+      --organization '{{ item.organization }}'
+  with_items: '{{ teams }}'
+

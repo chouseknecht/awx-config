@@ -1,0 +1,104 @@
+tower_host: awx-web-svc-awx.192.168.64.4.xip.io
+tower_username: admin
+tower_password: password 
+tower_verify_ssl: false
+
+organizations:
+- name: ABC, Inc.
+  description: ABC, Inc.
+
+teams:
+- name: Developers
+  description: Developers
+  organization: ABC, Inc.
+
+credentials:
+- name: AWS
+  description: AWS
+  team: Developers
+  organization: ABC, Inc.
+  credential_type: 'Amazon Web Services'
+  inputs: | 
+    username: asdfasdfljlkjjdfdsflkjsdlfjXX 
+    password: XXXXXXasdfasdlfjljljdffEEaljfasdljfalsdjfljsdf23232444 
+
+- name: Vault 
+  description: Vault 
+  team: Developers
+  organization: ABC, Inc.
+  credential_type: Vault 
+  inputs: |
+    vault_password: opensesame
+
+- name: Machine
+  description: Machine
+  team: Developers
+  organization: ABC, Inc.
+  credential_type: Machine
+  inputs: | 
+    username: chouseknecht 
+    ssh_key_data: |
+      -----BEGIN RSA PRIVATE KEY-----
+      sN8P1iye5uNFV0gwin+JOoh0CuIMh5hLB87LDeOB/SpndAmCvDp2xK3LEjlf6Db1
+      OEamSeLVauU8TT0bRZUyzWXkxt5ZJKjl+MhPBRt23e9BQIyiGggrR8gEHs144FQC
+      yiaTaiGHsRqhbyXC2M3nCWdM07xAaBQP9tRVkrcsPwXUgJPNshgAgy5DlhRWCS9o
+      A4cHE+UkWQHti+/p5O5UT0jds7Ki2IECggEBAM2lKo3IKRNDKsLdsjNvTXcXDM/E
+      hOEikrgOp00gbJ/Y8XzOmwDyxZMRG4dYcmfFKcO3AS6aPlvf9S8TlltCKA6A6dGZ
+      KM+HXaM3t4IRKot2aVxCcUPzl2LTMo5qKkLg75bp/A94puLH9ByXbR7FsVr2HBwm
+      KXHRwG3iVhH7tiwcpOsnd2fO9K36KD4VTaUWc6UX/mqZc4X4L5rBe8tILiVfis5I
+      tijBoYwlrHj3Ea5oI2cSRdfmWukjNjqda0h88ZpSnOiFD1WC0YdJMB4A1l/hr85Q
+      v9qYvv+QVEbF3WIQacWkerSeKMy+0ktekhck5Sz8DhVsBF3MJPjIxgQfIKk=
+      ....
+      -----END RSA PRIVATE KEY-----
+
+- name: GitHub 
+  description: GitHub 
+  team: Developers
+  organization: ABC, Inc.
+  credential_type: Source Control
+  inputs: | 
+    ssh_key_data: |
+      -----BEGIN RSA PRIVATE KEY-----
+      yiaTaiGHsRqhbyXC2M3nCWdM07xAaBQP9tRVkrcsPwXUgJPNshgAgy5DlhRWCS9o
+      A4cHE+UkWQHti+/p5O5UT0jds7Ki2IECggEBAM2lKo3IKRNDKsLdsjNvTXcXDM/E
+      hOEikrgOp00gbJ/Y8XzOmwDyxZMRG4dYcmfFKcO3AS6aPlvf9S8TlltCKA6A6dGZ
+      KM+HXaM3t4IRKot2aVxCcUPzl2LTMo5qKkLg75bp/A94puLH9ByXbR7FsVr2HBwm
+      KXHRwG3iVhH7tiwcpOsnd2fO9K36KD4VTaUWc6UX/mqZc4X4L5rBe8tILiVfis5I
+      tijBoYwlrHj3Ea5oI2cSRdfmWukjNjqda0h88ZpSnOiFD1WC0YdJMB4A1l/hr85Q
+      v9qYvv+QVEbF3WIQacWkerSeKMy+0ktekhck5Sz8DhVsBF3MJPjIxgQfIKk=
+      ...
+      -----END RSA PRIVATE KEY-----
+
+users:
+- username: bdavis 
+  password: password
+  email: bdavis@noemail.com 
+  first_name: Bob
+  last_name: Davis 
+  organizations:
+  - ABC, Inc.
+  teams:
+  - Developers
+
+- username: sbrando
+  password: password
+  email: sbrando@noemail.com
+  first_name: Scott 
+  last_name: Brando 
+  organizations:
+  - ABC, Inc.
+  teams:
+  - Developers
+
+projects:
+ - name: AWS Instance Create
+   description: Provision a DEV virtual machine on AWS.
+   scm_type: git
+   scm_url: 'https://github.com/chouseknecht/aws-instance-create.git'
+   organization: ABC, Inc.
+
+ - name: Hello World
+   description: Deploy Hello World
+   scm_type: git
+   scm_url: 'https://github.com/chouseknecht/hello-world.git'
+   organization: ABC, Inc.
