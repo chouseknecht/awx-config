@@ -62,4 +62,4 @@ An example playbook is provided [here](./awx-setup.yml), and an example AWX data
 
 ## License
 
-Apache V2
+[Apache V2](./LICENSE)
