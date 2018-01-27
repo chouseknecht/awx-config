@@ -2,7 +2,7 @@
 
 Example of using [Tower CLI](https://github.com/ansible/tower-cli) to configure an AWX instance.
 
-## Optons
+## Options
 
 tower_host: '' 
 > Your host FQDN or IP address
