@@ -1,6 +1,6 @@
 # AWX config role
 
-Example of using [Tower CLI](https://github.com/ansible/tower-cli) to configure an AWX instance.
+Uses [Tower CLI](https://github.com/ansible/tower-cli) to configure an AWX instance.
 
 ## Options
 
@@ -8,25 +8,25 @@ tower_host: ''
 > Your host FQDN or IP address
 
 tower_username: admin
-> Your login username
+> Your AWX admin username
 
 tower_password: password
-> Your login password
+> Your AWX admin password
 
 tower_verify_ssl: false
-> Wether or not to very the Tower hosts TLS certs. Unless
+> Whether or not to very the AWX host's TLS certs.
 
 organizations: []
-> Provide a list of organizations to be created. Each organization will be map of `key: value` pairs. [See example data file](./awx-example-data.yml) for keys.
+> Provide a list of organizations to be created. Each organization will be a map of `key: value` pairs. [See example data file](./awx-example-data.yml) for keys.
 
 teams: []
-> Provide a list of teams to be created. Each team will be map of `key: value` pairs. [See example data file](./awx-example-data.yml) for keys.
+> Provide a list of teams to be created. Each team will be a map of `key: value` pairs. [See example data file](./awx-example-data.yml) for keys.
 
 credentials: []
-> Provide a list of credentials to be created. Each credential will be map of `key: value` pairs. Each credential type has a different mapping of `inputs`. Check the Tower CLI docs for more info. For each credential, provide an organization name with which to associate the credential. [See example data file](./awx-example-data.yml) for keys.
+> Provide a list of credentials to be created. Each credential will be a map of `key: value` pairs, and each credential type has a different mapping of `inputs`. Check the Tower CLI docs for more info on `inputs`. And for each credential, provide an organization name with which to associate the credential. [See example data file](./awx-example-data.yml) for keys.
 
 users: []
-> Provide a list of users to be created. Each user will be map of `key: value` pairs. For each user, provide a list of team names, and a list of organizations. The user will be associated with the organizations and teams. [See example data file](./awx-example-data.yml) for keys.
+> Provide a list of users to be created. Each user will be a map of `key: value` pairs. For each user, provide a list of team names, and a list of organizations. The user will be associated with the teams and organizations. [See example data file](./awx-example-data.yml) for keys.
 
 projects: []
 > Provide a list of projects to be created. Each project will be map of `key: value` pairs. For each project, provide an organization name with which to associate the credential. [See example data file](./awx-example-data.yml) for keys.
