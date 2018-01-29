@@ -1,6 +1,6 @@
 galaxy_info:
   author: Chris Houseknecht 
-  description: Example using Tower CLI to configure Tower instance 
+  description: Maintain your AWX config separate from your AWX instance 
   company: Ansible by Red Hat 
 
   # If the issue tracker for your role is not on github, uncomment the
