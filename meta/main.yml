@@ -45,11 +45,10 @@ galaxy_info:
     versions:
     - all 
 
+  cloud_platforms: []
+
   galaxy_tags:
   - awx 
   - tower
-  - tower-cli 
-  - cli 
-  - config
 
 dependencies: []
