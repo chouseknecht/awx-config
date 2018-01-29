@@ -2,7 +2,7 @@
 
 Uses [Tower CLI](https://github.com/ansible/tower-cli) to configure an AWX instance.
 
-This role provides a starting point for defining your AWX configuration (e.g., organizations, users, teams, credentials, etc.) externally from an AWX instance, which gives you the freedom to create and destroy AWX instances without loosing your configuration. Great for when you're giving demos, providing trainining, or you just want to live on the cutting of AWX development.
+This role provides a starting point for defining your AWX configuration (e.g., organizations, users, teams, credentials, etc.) externally from an AWX instance. By keeping the majority of your configuration external, you get the freedom to create and destroy AWX instances, which is great for when you're giving demos, providing training, or you just want to live on the cutting edge of AWX development.
 
 The dataset supported by this role is not fully complete. Here's what's NOT in the supported dataset:
 
