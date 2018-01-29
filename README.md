@@ -2,18 +2,33 @@
 
 Uses [Tower CLI](https://github.com/ansible/tower-cli) to configure an AWX instance.
 
+This role provides a starting point for defining your AWX configuration (e.g., organizations, users, teams, credentials, etc.) externally from an AWX instance, which gives you the freedom to create and destroy AWX instances without loosing your configuration. Great for when you're giving demos, providing trainining, or you just want to live on the cutting of AWX development.
+
+The dataset supported by this role is not fully complete. Here's what's NOT in the supported dataset:
+
+- job templates
+- workflow templates
+- inventory
+- notifications
+
+If you use this role, and you figure out how to add one of the above, please submit a PR. Help is always welcome!
+
 ## Options
 
-tower_host: '' 
+Ideally you will put all of your data into one or more encrypted var files, using Ansible Vault, and then pass the file(s) into the playbook. If you're not quite sure how Ansible Vault works, check out [the docs here](http://docs.ansible.com/ansible/latest/vault.html).
+
+Below are the data elements currently supported by the role:
+
+awx_host: '' 
 > Your host FQDN or IP address
 
-tower_username: admin
+awx_username: admin
 > Your AWX admin username
 
-tower_password: password
+awx_password: password
 > Your AWX admin password
 
-tower_verify_ssl: false
+awx_verify_ssl: false
 > Whether or not to very the AWX host's TLS certs.
 
 organizations: []
