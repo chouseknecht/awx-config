@@ -1,7 +1,7 @@
-tower_host: awx-web-svc-awx.192.168.64.4.xip.io
-tower_username: admin
-tower_password: password 
-tower_verify_ssl: false
+awx_host: awx-web-svc-awx.192.168.64.4.xip.io
+awx_username: admin
+awx_password: password 
+awx_verify_ssl: false
 
 organizations:
 - name: ABC, Inc.

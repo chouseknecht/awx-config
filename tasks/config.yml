@@ -1,14 +1,14 @@
 # config.yml
 ---
 - name: Set the host 
-  shell: tower-cli config host {{ tower_host }} 
+  shell: tower-cli config host {{ awx_host }} 
 
 - name: Set the username
-  command: tower-cli config username {{ tower_username }}
+  command: tower-cli config username {{ awx_username }}
 
 - name: Set the password
-  command: tower-cli config password {{ tower_password }} 
+  command: tower-cli config password {{ awx_password }} 
 
 - name: Set verify SSL
-  command: tower-cli config verify_ssl {{ tower_verify_ssl }}
+  command: tower-cli config verify_ssl {{ awx_verify_ssl }}
 

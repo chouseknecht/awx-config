@@ -5,10 +5,10 @@
 # NOTE: Don't put sensitive auth data in here. Instead, use an Ansible Vault, and pass the vault file path
 #       to vars_files in the playbook. 
 
-tower_host: '' 
-tower_username: admin
-tower_password: password
-tower_verify_ssl: false
+awx_host: '' 
+awx_username: admin
+awx_password: password
+awx_verify_ssl: false
 
 organizations: []
  #- name: ''
